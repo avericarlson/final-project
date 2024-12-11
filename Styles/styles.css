@@ -1,48 +1,92 @@
-body{
+/* Basic styling */
+body {
     background-color:antiquewhite;
     color: black;
     font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    align-items: center;
 }
-h1{
-    color:rgb(84, 50, 27);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style:italic;
+
+h1 {
+    color:rgb(84, 42, 22);
+    font-family:fantasy;
 }
-h2, h3, h4, h5, h6{
-    color:saddlebrown;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style:italic;
+h2,h3,h4,h5,h6{
+    color:rgb(84, 42, 22);
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .navbar {
-    padding: 10px;
-    display:flex;
+    background-color:rgb(99, 61, 34); /* Darker color for navbar */
+    color: white;
+    padding: 15px;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    color: saddlebrown;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1; /* Ensure it sits on top of other content */
+    transition: top 0.3s; /* Smooth transition for hiding */
 }
-.sidebar{
-    background-color:saddlebrown;
-    width:150px;
+
+/* When navbar is hidden, move it above the page */
+.navbar.hidden {
+    top: -80px; /* Move the navbar out of view */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color:rgb(99, 61, 34);
+    width: 150px;
     height: 100%;
-    left:0;
+    left: 0;
     padding: 15px;
-    position:fixed
+    position: fixed;
 }
-.sidebar ul{
+
+.sidebar ul {
     list-style: none;
     padding: 0;
 }
-.sidebar ul li{
+
+.sidebar ul li {
     margin: 15px 0;
 }
-.sidebar ul li a{
-    color:white;
+
+.sidebar ul li a {
+    color: white;
     text-decoration: none;
 }
-.sidebar ul li a:hover{
+
+.sidebar ul li a:hover {
     text-decoration: underline;
+    font-weight: bold;
 }
-.main-content{
+
+/* Main Content Styling */
+.main-content {
     margin-left: 170px;
-    padding: 20px
+    padding: 20px;
+    padding-top: 80px; /* Space for the navbar */
+}
+
+/* Centering content and images */
+.centered-content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.centered-content img {
+    display: block;
+    margin: 0 auto;
 }
